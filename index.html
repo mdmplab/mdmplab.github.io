@@ -2430,6 +2430,33 @@
     .alumni-card + .alumni-card{margin-top:18px}
     .alumni-heading .alumni-phone{display:block;margin-top:6px;color:#93a9c2;font-size:11px}
 
+  
+    .prof-activities,.prof-teaching{grid-column:1/-1;border-right:0!important}
+    .prof-activities{border-bottom:1px solid var(--line)!important}
+    .prof-teaching{border-bottom:0!important}
+    .academic-record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:17px}
+    .academic-record-card{min-width:0;padding:20px;border:1px solid rgba(126,174,255,.16);border-radius:16px;background:rgba(255,255,255,.018)}
+    .academic-record-card h6{margin:0 0 14px;color:#a9c5f4;font-size:14px}
+    .academic-record-card .profile-list{margin:0}
+    .record-list{display:grid;gap:14px;margin:0;padding:0;list-style:none;counter-reset:record}
+    .record-list li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:3px 12px;padding-bottom:13px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .record-list li:last-child{padding-bottom:0;border-bottom:0}
+    .record-list strong{grid-row:1/3;color:#82adff;font-size:11px}
+    .record-list span{color:#d5e0ec;font-size:12px;line-height:1.65}
+    .record-list small{grid-column:2;color:#8296ae;font-size:10px;line-height:1.55}
+    .alumni-directory-wrap{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+    .alumni-directory-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
+    .alumni-directory-head span{color:#789fe8;font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+    .alumni-directory-head strong{font-size:18px}
+    .alumni-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .alumni-directory-card{position:relative;min-width:0;min-height:112px;padding:19px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(150deg,rgba(255,255,255,.03),rgba(255,255,255,.012))}
+    .alumni-directory-card h4{margin:3px 0 9px;font-size:17px}
+    .alumni-directory-card p{margin:0;padding-right:10px;color:#93a7be;font-size:11px;line-height:1.65;word-break:keep-all}
+    .alumni-directory-index{position:absolute;right:12px;top:10px;color:rgba(137,178,245,.43);font-size:9px}
+    @media(max-width:900px){.alumni-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:760px){.academic-record-grid{grid-template-columns:minmax(0,1fr)}.record-list li{grid-template-columns:84px minmax(0,1fr)}.alumni-directory-card{min-height:104px}}
+    @media(max-width:480px){.alumni-directory{grid-template-columns:minmax(0,1fr)}.alumni-directory-card{min-height:0}.alumni-directory-head{align-items:flex-start;flex-direction:column;gap:4px}}
+
   </style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
@@ -2766,6 +2793,7 @@
           <div class="team-tabs" role="tablist" aria-label="구성원 분류" hidden>
             <button type="button" id="team-tab-professor" role="tab" aria-controls="team-professor" aria-selected="true">Professor</button>
             <button type="button" id="team-tab-students" role="tab" aria-controls="team-students" aria-selected="false" tabindex="-1">Students</button>
+            <button type="button" id="team-tab-alumni" role="tab" aria-controls="team-alumni" aria-selected="false" tabindex="-1">Alumni</button>
           </div>
         </div>
       </div>
@@ -2789,7 +2817,7 @@
 <div class="professor-main">
                 <div class="professor-heading"><span class="role">Professor · Department of Automotive Engineering</span>
                 <h4>이형욱 교수</h4>
-                <div class="eng-name">Hyung-Wook Lee</div></div>
+                <div class="eng-name">Hyoung-Wook Lee</div></div>
 
                 <p class="professor-intro">
                   재료역학, 구조 CAE 및 최적공정설계를 기반으로 전산구조해석,
@@ -2905,28 +2933,35 @@
                 </div>
               </div>
 
-              <div class="prof-detail-panel">
-                <div class="detail-heading">
-                  <h5>Research & Academic Activities</h5>
-                  <span>Research / Society</span>
-                </div>
-
-                <ul class="profile-list">
-                  <li>연구분야: 전산구조해석, 시스템설계, 성형해석</li><li>산학연구: 친환경자동차 체결부품 정밀 성형, 등속조인트 측정장비, 고압 파이프 체결원리</li><li>연구방법: 유한요소해석과 실험 데이터 비교 분석</li>
-                  <li>한국소성가공학회(KSTP) 종신회원 · 편집위원</li>
-                  <li>한국자동차공학회(KSAE) 회원</li>
-                  <li>한국정밀공학회(KSPE) 회원</li>
-                </ul>
-
-                <div class="profile-chip-wrap">
-                  <span class="profile-chip">Computational Structural Analysis</span>
-                  <span class="profile-chip">System Design</span>
-                  <span class="profile-chip">Forming Analysis</span>
-                  <span class="profile-chip">Process Optimization</span>
+              <div class="prof-detail-panel prof-activities">
+                <div class="detail-heading"><h5>Academic Activities</h5><span>Society · Patents · Papers · Books</span></div>
+                <div class="academic-record-grid">
+                  <section class="academic-record-card"><h6>학회활동</h6><ul class="profile-list">
+                    <li>한국소성가공학회(KSTP), 종신회원, 편집위원</li>
+                    <li>한국자동차공학회(KSAE), 종신회원</li>
+                    <li>한국금형공학회(KSDME), 이사</li>
+                    <li>한국정밀공학회(KSPE), 회원</li>
+                    <li>한국생산제조학회(KSMTE), 회원</li>
+                    <li>2024–2025 한국자동차공학회 지회이사, 재무이사, 평의원</li>
+                    <li>2026 한국자동차공학회 대전 · 세종 · 충청지회 수석부지회장</li>
+                  </ul></section>
+                  <section class="academic-record-card"><h6>특허출원</h6><ol class="record-list">
+                    <li><strong>10-2022-0164911</strong><span>수소공급장치 및 실링장치</span><small>한국교통대학교 산학협력단 · 현대자동차주식회사 · 기아자동차주식회사</small></li>
+                    <li><strong>10-2025-0024100</strong><span>내경 측정장치</span><small>국립한국교통대학교 산학협력단 · 서한이노빌리티(주)</small></li>
+                  </ol></section>
+                  <section class="academic-record-card"><h6>논문</h6><ol class="record-list">
+                    <li><strong>2022</strong><span>Prediction of Ply Angles of Air Springs According to Airbag Positions and Their Effects on Lateral and Torsional Stiffness</span><small>APPLIED SCIENCES-BASEL · Vol.12, No.22 · 이형욱, 김철수</small></li>
+                    <li><strong>2023</strong><span>EPS 각도센서용 토션 바의 압입공정의 휨과 회전현상 분석</span><small>소성가공 · Vol.32, No.6, pp.376–383 · 이형욱, 이승호, 전태호, 정일기</small></li>
+                  </ol></section>
+                  <section class="academic-record-card"><h6>저서</h6><ol class="record-list">
+                    <li><strong>2022 · 번역</strong><span>Gere 정역학과 재료역학</span><small>센게이지러닝코리아</small></li>
+                    <li><strong>2024 · 저서</strong><span>미니탭을 활용한 최적공정설계</span><small>교보문고</small></li>
+                    <li><strong>2026 · 저서</strong><span>구조CAE원리 및 응용</span><small>교보문고</small></li>
+                  </ol></section>
                 </div>
               </div>
 
-              <div class="prof-detail-panel">
+              <div class="prof-detail-panel prof-teaching">
                 <div class="detail-heading">
                   <h5>Teaching</h5>
                   <span>Courses</span>
@@ -3020,7 +3055,12 @@
         
 
 
-        <div class="team-group reveal" id="alumni">
+        
+
+
+</div>
+<div class="team-panel" id="team-alumni" role="tabpanel" aria-labelledby="team-tab-alumni" tabindex="0">
+<div class="team-group reveal" id="alumni">
           <div class="team-group-head">
             <div class="team-group-title"><span class="num">04</span><h3>Alumni</h3></div>
             <p>연구실 졸업생</p>
@@ -3062,9 +3102,7 @@
               <p class="alumni-collaboration">KITECH, co-advised by Dr. J.H.Song</p>
             </div>
           </article>
-        </div>
-
-
+        <div class="alumni-directory-wrap"><div class="alumni-directory-head"><span>Alumni Directory</span><strong>졸업생 명단</strong></div><div class="alumni-directory"><article class="alumni-directory-card"><span class="alumni-directory-index">01</span><h4>이정민</h4><p>한국교통대학교 에너지시스템공학과 석사 졸업</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">02</span><h4>박근영</h4><p>인하대학교 기계공학과 석사 졸업 · 오스템</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">03</span><h4>김덕원</h4><p>Alumni</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">04</span><h4>김기원</h4><p>LG Best Shop</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">05</span><h4>김성호</h4><p>인하대학교 기계공학과 석사 졸업 · 화신</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">06</span><h4>오준석</h4><p>한국교통대학교 자동차공학과 석사 졸업 · 한국자동차연구원</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">07</span><h4>정준영</h4><p>인하대학교 기계공학과 석사 졸업 · 에스엘</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">08</span><h4>이지현</h4><p>특허청 7급</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">09</span><h4>채유진</h4><p>연세대학교 기계공학과 석사 졸업 · 삼성전자</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">10</span><h4>류일정</h4><p>한국교통대학교 자동차공학과 석사 졸업 · 지난직업대학교</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">11</span><h4>윤희찬</h4><p>일진글로벌</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">12</span><h4>한승룡</h4><p>모트렉스</p></article><article class="alumni-directory-card"><span class="alumni-directory-index">13</span><h4>김경민</h4><p>고려대학교 석사과정 재학</p></article></div></div></div>
 </div>
       </div>
     </div>

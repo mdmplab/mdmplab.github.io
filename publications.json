@@ -1,0 +1,46 @@
+[
+  {
+    "year": "2026",
+    "date": "2026.05",
+    "kind": "학술지",
+    "title": "이중 스프링 구조를 이용한 유연 부품의 내경 측정 장치 개발",
+    "authors": "송호진 · 서민석 · 이준석 · 오병기 · 이형욱",
+    "journal": "한국자동차공학회논문집 · 34(5) · pp. 573–582",
+    "summary": "이중 스프링과 정렬 지그를 적용한 내경 측정 장치를 개발하고, Gage R&R 분석으로 측정 신뢰성을 평가한 연구.",
+    "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12746444",
+    "label": "논문 정보"
+  },
+  {
+    "year": "2026",
+    "date": "2026.04",
+    "kind": "학술대회",
+    "title": "볼트의 탄소성 체결공정 모사를 위한 해석 기법 연구",
+    "authors": "이형욱 · 이재민 · 송호진 · 서민석",
+    "journal": "한국소성가공학회 학술대회 논문집 · p. 110",
+    "summary": "볼트의 탄소성 체결공정을 모사하기 위한 유한요소해석 기법을 다룬 연구.",
+    "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12752407",
+    "label": "논문 정보"
+  },
+  {
+    "year": "2025",
+    "date": "2025.11",
+    "kind": "학술대회",
+    "title": "강성 최대화 기법을 이용한 KSAE 자작자동차 너클의 경량 형상설계",
+    "authors": "송호진 · 서민석 · 안병훈 · 신하윤 · 김상후 · 이제학 · 지승준 · 김도현 · 이형욱",
+    "journal": "한국자동차공학회 추계학술대회 및 전시회 · p. 2612",
+    "summary": "강성 최대화 기법으로 KSAE 자작자동차 너클의 경량 형상을 설계한 연구.",
+    "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12540010",
+    "label": "논문 정보"
+  },
+  {
+    "year": "2021",
+    "date": "2021.06",
+    "kind": "학술지",
+    "title": "A Study of Prediction Based on Regression Analysis for Real-World Co2 Emissions with Light-Duty Diesel Vehicles",
+    "authors": "차준표 · 박준홍 · 이형욱 · 전문수",
+    "journal": "International Journal of Automotive Technology · 22(3), 569–577",
+    "summary": "실제 도로 주행 데이터와 회귀분석을 이용한 경유 차량의 CO₂ 배출량 예측 연구.",
+    "url": "https://doi.org/10.1007/s12239-021-0053-z",
+    "label": "DOI / 논문 정보"
+  }
+]
