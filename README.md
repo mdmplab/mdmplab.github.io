@@ -1,4 +1,4 @@
-# MDMP Lab V29 · GitHub Pages 배포용
+# MDMP Lab V30 · GitHub Pages 배포용
 
 ## 업로드
 1. ZIP을 압축 해제합니다.
@@ -109,3 +109,6 @@ Our Team을 Professor / Students / Alumni로 분리했습니다. 기존 상세 �
 
 ## V29 서민석 사진 교체
 서민석 학생의 프로필 사진을 새로 제공된 증명사진으로 교체했습니다.
+
+## V30 송호진 사진 교체
+송호진 학생의 프로필 사진을 새로 제공된 증명사진으로 교체했습니다.
