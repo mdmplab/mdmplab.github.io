@@ -1,4 +1,4 @@
-# MDMP Lab V31 · GitHub Pages 배포용
+# MDMP Lab V32 · GitHub Pages 배포용
 
 ## 업로드
 1. ZIP을 압축 해제합니다.
@@ -115,3 +115,6 @@ Our Team을 Professor / Students / Alumni로 분리했습니다. 기존 상세 �
 
 ## V31 Google Search Console 인증
 Google Search Console 소유권 확인용 HTML 파일을 사이트 최상위 경로에 추가했습니다.
+
+## V32 Google 검색 최적화
+canonical, 검색 로봇 설정, Open Graph, 구조화 데이터, robots.txt와 sitemap.xml을 추가했습니다.
